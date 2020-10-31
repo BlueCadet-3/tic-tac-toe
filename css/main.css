@@ -32,14 +32,18 @@ header {
   background-color: var(--board);
   width: auto;
   height: auto;
-  align-items: space-around;
 }
 
 #row1, #row2, #row3 {
   width: 100vmin;
   height: 25vmin;
   vertical-align: center;
+  align-items: stretch;
   margin: 0 1vmin 1vmin 0;
+}
+
+#row3 {
+  margin: 0 1vmin 0 0;
 }
 
 .sqr {
@@ -47,10 +51,10 @@ header {
   width: 25vmin;
   height: 25vmin;
   display: inline-block;
-  align-items: space-around;
 }
 
 footer{
   background: var(--bg-main);
   height: 15vmin;
+  color: var(--bg-acc);
 }
