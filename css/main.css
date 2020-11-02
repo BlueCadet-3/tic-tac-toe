@@ -12,17 +12,21 @@
   --board: #8C0F0F;
   --txt-01: #D9D7CC;
   --txt-02: #F2F2F2;
+  --X: #1B3C59;
+  --O: #F24162;
 }
 
 header {
   background-color: var(--bg-main);
+  height: 10vmin;
   color: var(--txt-01);
   text-align: center;
-  font-size: 5vmin;
+  font-size: 4.5vmin;
 }
 
 #msg {
  background-color: var(--bg-acc);
+ vertical-align: center;
  color: var(--txt-02);
  text-align: center;
  font-size: 3vmin;
@@ -38,7 +42,7 @@ header {
   width: 100vmin;
   height: 25vmin;
   vertical-align: center;
-  align-items: stretch;
+  align-content: space-around;
   margin: 0 1vmin 1vmin 0;
 }
 
@@ -57,4 +61,20 @@ footer{
   background: var(--bg-main);
   height: 15vmin;
   color: var(--bg-acc);
+}
+
+#replay {
+  background-color: var(--bg-acc);
+  border: 3px dashed var(--txt-01);
+  border-radius: 4px;
+  padding: 1vmin;
+  font-size: 3vmin;
+  color: var(--txt-01);
+}
+
+#replay:hover {
+  background-color: var(--txt-01);
+  border-color: var(--board);
+  cursor: pointer;
+  color: var(--bg-main);
 }
