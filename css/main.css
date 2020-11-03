@@ -1,80 +1,75 @@
 * {
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
   padding: 0;
   border: 0;
   margin: 0;
 }
 
 :root {
-  --bg-main: #0D0D0D;
-  --bg-acc: #595140;
-  --board: #8C0F0F;
-  --txt-01: #D9D7CC;
-  --txt-02: #F2F2F2;
-  --X: #1B3C59;
-  --O: #F24162;
+  --bg-main: #18298C;
+  --bg-acc: #F27781;
+  --bg-brd: #04BF8A;
+  --txt-01: #F29F05;
+  --txt-02: #F2CF1D;
+}
+
+body {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  max-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 header {
   background-color: var(--bg-main);
-  height: 10vmin;
+  height: 15vh;
+  font-size: 4vmin;
   color: var(--txt-01);
-  text-align: center;
-  font-size: 4.5vmin;
 }
 
 #msg {
- background-color: var(--bg-acc);
- vertical-align: center;
- color: var(--txt-02);
- text-align: center;
- font-size: 3vmin;
+  background-color: var(--bg-acc);
+  justify-content: center;
+  font-size: 3vmin;
+  padding: 3% 0 0;
 }
 
 #board {
-  background-color: var(--board);
-  width: auto;
-  height: auto;
-}
-
-#row1, #row2, #row3 {
-  width: 100vmin;
-  height: 25vmin;
-  vertical-align: center;
-  align-content: space-around;
-  margin: 0 1vmin 1vmin 0;
-}
-
-#row3 {
-  margin: 0 1vmin 0 0;
+  background-color: var(--bg-brd);
+  min-height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1vmin;
 }
 
 .sqr {
-  background-color: #F2F2F2;
-  width: 25vmin;
-  height: 25vmin;
-  display: inline-block;
+  background-color: gainsboro;
 }
 
-footer{
-  background: var(--bg-main);
-  height: 15vmin;
-  color: var(--bg-acc);
+footer {
+  background-color: var(--bg-main);
 }
 
-#replay {
-  background-color: var(--bg-acc);
-  border: 3px dashed var(--txt-01);
-  border-radius: 4px;
-  padding: 1vmin;
-  font-size: 3vmin;
+button {
+  background-color: var(--bg-main);
+  font-size: 2.5vmin;
+  font-family: monospace;
   color: var(--txt-01);
+  border: 4px dotted var(--txt-01);
+  border-radius: 12px;
+  padding: 2%;
+  margin: 2%;
 }
 
-#replay:hover {
-  background-color: var(--txt-01);
-  border-color: var(--board);
+button:hover {
+  border-color: var(--bg-brd);
+  color: var(--bg-acc);
   cursor: pointer;
-  color: var(--bg-main);
 }
