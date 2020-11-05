@@ -17,7 +17,7 @@ const WIN_COMBOS = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]              
+  [2, 4, 6]
 ]
 
 /* Define state variables */
@@ -56,9 +56,8 @@ function render() {
 	sqrs[idx].style.background = players[sqr]; // 4.3.1.1.3) Set the background color of the current element by using the value as a key on the colors lookup object (constant). 
   // 4.2.2) Render a message:
   if (winner === 'T') {msg.innerText = `Cat's game!`;// 4.2.2.2) If winner is equal to 'T' (tie), render a tie message.
-  } else if (winner) {`Congratulations, ${players[winner].toUpperCase()}...you did it!`; // 4.2.2.3) Otherwise, render a congratulatory message to which player has won - use the color name for the player, converting it to uppercase.
-  } else {
-      msg.innerText = `${players[turn].toUpperCase()}'s turn!`; // 4.2.2.1) If winner has a value other than null (game still in progress), render whose turn it is - use the color name for the player, converting it to upper case.		
+  } else if (winner) {msg.innerText = `Congratulations, ${players[winner].toUpperCase()}...you did it!`; // 4.2.2.3) Otherwise, render a congratulatory message to which player has won - use the color name for the player, converting it to uppercase.
+  } else {msg.innerText = `${players[turn].toUpperCase()}'s turn!`; // 4.2.2.1) If winner has a value other than null (game still in progress), render whose turn it is - use the color name for the player, converting it to upper case.		
 	// 4.3) Wait for the user to click a square
 	};
 });
